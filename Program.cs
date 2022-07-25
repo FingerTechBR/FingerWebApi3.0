@@ -7,6 +7,8 @@ builder.Services.AddControllers();
 
 
 builder.Services.AddControllers();
+
+
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("CorsPolicy",
@@ -14,8 +16,6 @@ builder.Services.AddCors(o =>
         .AllowAnyOrigin()
         .AllowAnyHeader());
 });
-
-
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\laragon\\www\\WebApiFingertec3.0\\WebApiFingertec3.0.csproj": {}
+    "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {}
   },
   "projects": {
-    "D:\\laragon\\www\\WebApiFingertec3.0\\WebApiFingertec3.0.csproj": {
+    "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\laragon\\www\\WebApiFingertec3.0\\WebApiFingertec3.0.csproj",
+        "projectUniqueName": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
         "projectName": "WebApiFingertec3.0",
-        "projectPath": "D:\\laragon\\www\\WebApiFingertec3.0\\WebApiFingertec3.0.csproj",
+        "projectPath": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
         "packagesPath": "C:\\Users\\silvio.capelo\\.nuget\\packages\\",
-        "outputPath": "D:\\laragon\\www\\WebApiFingertec3.0\\obj\\",
+        "outputPath": "D:\\laragon\\www\\FingerWebApi3.0\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\silvio.capelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,10 +43,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2-beta1, )"
-            },
-            "Refit.HttpClientFactory": {
-              "target": "Package",
-              "version": "[6.3.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
