@@ -2,6 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApiFingertec3._0.Models;
 using System.Text.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using WebApiFingertec3._0.Abstraction;
+using System.Data;
 
 namespace WebApiFingertec3._0.Controllers
 {
@@ -10,38 +14,41 @@ namespace WebApiFingertec3._0.Controllers
     {
 
         [HttpGet]
-        [Route("Enroll/{id:int:min(1)}")]
+        [Route("enroll/{id:int:min(1)}")]
         public string Enroll(int id)
         {
             return Entity.EntityFinger.EnrrowCapture(id);
         }
 
         [HttpGet]
-        [Route("Capture/{id:int:min(1)}")]
-        public string Capture(int id)
+        //[Route("capture/{id:int:min(1)}")]
+        [Route("capture")]
+        public string Capture()
         {
+            int id = 1;
             return Entity.EntityFinger.Capture(id);   
         }
 
         [HttpGet]
-        [Route("Identify")]
-        public string Identify([FromBody] Template Templates)
+        [Route("verify-match")]
+        public string VerifyMatch([FromBody] Template Templates)
         {
 
-            return Entity.EntityFinger.Identify(Templates.Templates);
+            return Entity.EntityFinger.VerifyMatch(Templates.Templates);
 
         }
 
         [HttpGet]
-        [Route("Compare")]
-        public string Compare([FromBody]string textFir)
+        [Route("identify")]
+        public string Identify([FromBody] Object template)
         {
-            string er5r = textFir;
-            return Entity.EntityFinger.Compare(textFir);
+
+            return Entity.EntityFinger.Identify(template);
+
+            return "";
         }
 
-
-
+ 
 
     }
 }
