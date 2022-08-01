@@ -10,7 +10,7 @@ namespace WebApiFingertec3._0.Repositories
         {
             var users = new List<User>();
             users.Add(new User { Id = 1, Username = "administrador", Password = "administrador" });
-            return users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password == x.Password).FirstOrDefault();
+            return users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password == password).FirstOrDefault();
         }
     }
 }

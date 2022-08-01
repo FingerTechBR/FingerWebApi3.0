@@ -39,7 +39,7 @@ namespace WebApiFingertec3._0.Controllers
         [Authorize]
         public string Enroll(int id)
         {
-            return Entity.EntityFinger.EnrrowCapture(id)
+            return Entity.EntityFinger.EnrollCapture(id)
 ;
         }
 

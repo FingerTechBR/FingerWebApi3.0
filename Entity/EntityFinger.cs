@@ -15,7 +15,7 @@ namespace WebApiFingertec3._0.Entity
         public static uint userID;
 
 
-        public static string? EnrrowCapture(int id)
+        public static string? EnrollCapture(int id)
         {
             NBioAPI.Type.FIR_PAYLOAD myPayload = new NBioAPI.Type.FIR_PAYLOAD();
             NBioAPI m_NBioAPI = new NBioAPI();
