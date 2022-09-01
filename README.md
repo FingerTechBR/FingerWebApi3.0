@@ -1,22 +1,21 @@
-# FingerWebApi3.0
-<h3>Guia Finger Web API 3.0 (.NET 6.0)</h3>
+## Guia Finger Web API 3.0 (.NET 6.0)
 
-Neste guia foi utilizado o endpoint local: https://localhost:7202;
-Testamos as rotas com o software Insomnia; API rodando direto no Visual Studio 2022 (C#).
+#### Neste guia foi utilizado o endpoint local: https://localhost:7202;
+#### Testamos as rotas com o software Insomnia; API rodando direto no Visual Studio 2022 (C#).
 
 
 # <h3>Rotas</h3>
 
 # <h4>/login (POST)</h4>
 
-Para acessar as demais rotas, devemos nos autenticar e não receber   como resposta.
+Para acessar as demais rotas, devemos nos autenticar e não receber 401 como resposta.
 Envie o seguinte JSON no corpo da requisição POST:
  
 Se estiver correto, obterá a resposta:
  
 Pegue a string de “Token” e coloque em todas as requisições a partir daqui:
 
-A autenticação da API foi feita com JSON Web Token (JWT).
+###### A autenticação da API foi feita com JSON Web Token (JWT).
 
 # <h4>/capture (GET)</h4>
  
@@ -32,7 +31,7 @@ Necessário inserir o /{ID} do enroll (print exemplo acima).
 
 Rota GET responsável por comparar uma digital com outra (1:1), deve se fornecer uma hash para comparação:
  
-O retorno desta rota é booleano (ou erro).
+###### O retorno desta rota é booleano (ou erro).
 
 # <h4>/identify (GET)</h4>
 
@@ -41,7 +40,7 @@ Rota GET responsável por comparar uma digital com múltiplas (1:N), mas pode se
 No exemplo acima, a digital capturada corresponde ao usuário de ID 2.
 O JSON enviado nessa rota é um vetor de objetos.
 
-Observação: Fique atento a ortografia das chaves dos objetos.
+##### Observação: Fique atento a ortografia das chaves dos objetos.
 
 # <h3>Geral</h3>
 
