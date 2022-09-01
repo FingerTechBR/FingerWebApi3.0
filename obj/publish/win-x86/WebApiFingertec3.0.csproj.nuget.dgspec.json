@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {}
+    "C:\\Users\\Suporte4\\Desktop\\Stuff\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {}
   },
   "projects": {
-    "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {
+    "C:\\Users\\Suporte4\\Desktop\\Stuff\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
+        "projectUniqueName": "C:\\Users\\Suporte4\\Desktop\\Stuff\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
         "projectName": "WebApiFingertec3.0",
-        "projectPath": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
-        "packagesPath": "C:\\Users\\silvio.capelo\\.nuget\\packages\\",
-        "outputPath": "D:\\laragon\\www\\FingerWebApi3.0\\obj\\publish\\win-x86\\",
+        "projectPath": "C:\\Users\\Suporte4\\Desktop\\Stuff\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
+        "packagesPath": "C:\\Users\\Suporte4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Suporte4\\Desktop\\Stuff\\FingerWebApi3.0\\obj\\publish\\win-x86\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\silvio.capelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Suporte4\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2-beta1, )"
@@ -59,6 +67,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
+              "version": "[6.0.7, 6.0.7]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[6.0.7, 6.0.7]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x86",
+              "version": "[6.0.7, 6.0.7]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
+              "version": "[6.0.7, 6.0.7]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -67,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
