@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Runtime.Serialization;
-
-namespace WebApiFingertec3._0.Models
+﻿namespace WebApiFingertec3._0.Models
 {
 
     public class ContactCollection

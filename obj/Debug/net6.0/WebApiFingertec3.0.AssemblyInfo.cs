@@ -11,13 +11,14 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("WebApiFingertec3.0")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Fingertech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApiFingertec3.0")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApiFingertec3.0")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.0.0.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/FingerTechBR/FingerWebApi3.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

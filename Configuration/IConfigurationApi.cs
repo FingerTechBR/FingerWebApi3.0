@@ -1,6 +1,5 @@
 ﻿
 using Newtonsoft.Json;
-using WebApiFingertec3._0.Models;
 
 namespace WebApiFingertec3._0.Abstraction
 {
@@ -8,7 +7,7 @@ namespace WebApiFingertec3._0.Abstraction
     {
         public static T ToObject<T>(this string jsonText)
         {
-            return  JsonConvert.DeserializeObject<T>(jsonText);
+            return JsonConvert.DeserializeObject<T>(jsonText);
         }
 
         public static string ToJson<T>(this T obj)

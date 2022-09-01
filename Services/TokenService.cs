@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using WebApiFingertec3._0.Models;
-using Microsoft.IdentityModel.Tokens;
 
 namespace WebApiFingertec3._0.Services
 {
