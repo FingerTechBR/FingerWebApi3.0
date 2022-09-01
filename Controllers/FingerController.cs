@@ -1,14 +1,8 @@
-﻿using NITGEN.SDK.NBioBSP;  
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApiFingertec3._0.Models;
-using System.Text.Json;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using WebApiFingertec3._0.Abstraction;
-using System.Data;
-using WebApiFingertec3._0.Services;
 using WebApiFingertec3._0.Repositories;
-using Microsoft.AspNetCore.Authorization;
+using WebApiFingertec3._0.Services;
 
 namespace WebApiFingertec3._0.Controllers
 {
@@ -73,6 +67,6 @@ namespace WebApiFingertec3._0.Controllers
             return Entity.EntityFinger.Identify(template);
 
         }
-        
+
     }
 }

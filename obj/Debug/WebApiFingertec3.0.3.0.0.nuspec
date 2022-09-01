@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WebApiFingertec3.0</id>
+    <version>3.0.0</version>
+    <authors>WebApiFingertec3.0</authors>
+    <readme>README.md</readme>
+    <description>Package Description</description>
+    <repository type="git" url="https://github.com/FingerTechBR/FingerWebApi3.0" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.AspNetCore.Authentication" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="6.0.7" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.2-beta1" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore" version="6.2.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0/appsettings.Development.json" buildAction="Content" />
+      <files include="any/net6.0/appsettings.json" buildAction="Content" />
+      <files include="any/net6.0/libman.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\bin\Debug\net6.0\WebApiFingertec3.0.runtimeconfig.json" target="lib\net6.0\WebApiFingertec3.0.runtimeconfig.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\bin\Debug\net6.0\WebApiFingertec3.0.dll" target="lib\net6.0\WebApiFingertec3.0.dll" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\appsettings.Development.json" target="content\appsettings.Development.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\appsettings.Development.json" target="contentFiles\any\net6.0\appsettings.Development.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\appsettings.json" target="content\appsettings.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\appsettings.json" target="contentFiles\any\net6.0\appsettings.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\libman.json" target="content\libman.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\libman.json" target="contentFiles\any\net6.0\libman.json" />
+    <file src="C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\README.md" target="\README.md" />
+  </files>
+</package>

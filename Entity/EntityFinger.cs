@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using NITGEN.SDK.NBioBSP;
 using System.Data;
-using WebApiFingertec3._0.Models;
 
 namespace WebApiFingertec3._0.Entity
 {
@@ -50,7 +49,7 @@ namespace WebApiFingertec3._0.Entity
         }
 
         public static string? Capture(int id)
-        {                  
+        {
             // objFPImage = (NBioBSPCOMLib.IFPImage)objNBioBSP.FPImage;
             NBioAPI m_NBioAPI = new NBioAPI();
             NBioAPI.Type.INIT_INFO_0 initInfo0;
@@ -86,7 +85,7 @@ namespace WebApiFingertec3._0.Entity
             {
                 return Newtonsoft.Json.JsonConvert.SerializeObject(new { Msg = "Erro no cadastro de digital!" });
             }
-            
+
         }
 
 
@@ -96,7 +95,7 @@ namespace WebApiFingertec3._0.Entity
             NBioAPI.IndexSearch m_IndexSearch = new NBioAPI.IndexSearch(m_NBioAPI);
             NBioAPI.Type.FIR_TEXTENCODE templatefromDB = new NBioAPI.Type.FIR_TEXTENCODE();
             NBioAPI.Type.HFIR hCapturedFIR;
-     
+
             m_NBioAPI.OpenDevice(NBioAPI.Type.DEVICE_ID.AUTO);
             uint ret = m_NBioAPI.Capture(out hCapturedFIR);
 
@@ -111,9 +110,9 @@ namespace WebApiFingertec3._0.Entity
 
             if (templatefromDB.TextFIR.Length == 0)
             {
-                return "nenhuma digital encontrada!";
+                return "Nenhuma digital encontrada!";
             }
-   
+
             NBioAPI.Type.FIR_PAYLOAD myPayload = new NBioAPI.Type.FIR_PAYLOAD();
 
             uint ret1 = m_NBioAPI.VerifyMatch(hCapturedFIR, templatefromDB, out bool result, myPayload);
@@ -122,11 +121,11 @@ namespace WebApiFingertec3._0.Entity
             {
                 return "true";
             }
-            return "false"; 
+            return "false";
         }
 
 
-        public static  uint myCallback(ref NBioAPI.IndexSearch.CALLBACK_PARAM_0 cbParam0, IntPtr userParam)
+        public static uint myCallback(ref NBioAPI.IndexSearch.CALLBACK_PARAM_0 cbParam0, IntPtr userParam)
         {
             Convert.ToInt32(cbParam0.ProgressPos);
             return NBioAPI.IndexSearch.CALLBACK_RETURN.OK;
@@ -180,7 +179,7 @@ namespace WebApiFingertec3._0.Entity
         public static DataTable ConvertToDataTable(Object template)
         {
             JArray obj = JArray.Parse(template.ToString());
-         
+
             DataTable dt = new DataTable();
             DataColumn column;
             DataRow row;
@@ -199,7 +198,7 @@ namespace WebApiFingertec3._0.Entity
             for (int i = 0; i < obj.Count; i++)
             {
                 string id = obj[i]["userId"].ToString();
-                string temp = obj[i]["Templates"].ToString();
+                string temp = obj[i]["templates"].ToString();
 
                 row = dt.NewRow();
                 row["id"] = id;
@@ -208,7 +207,7 @@ namespace WebApiFingertec3._0.Entity
             }
             return dt;
         }
-    
+
 
     }
 }

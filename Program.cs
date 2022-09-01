@@ -9,8 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddControllers();
-
 builder.Services.AddCors();
 
 var key = Encoding.ASCII.GetBytes(Settings.Secret);
@@ -63,5 +61,12 @@ app.UseEndpoints(endpoints =>
 });
 
 app.MapControllers();
+
+Host.CreateDefaultBuilder(args)
+           .ConfigureWebHostDefaults(builder =>
+           {
+               builder.UseUrls("http://localhost:5001/");
+
+           });
 
 app.Run();
