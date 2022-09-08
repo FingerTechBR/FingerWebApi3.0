@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Runtime.InteropServices;
 using System.Text;
 using WebApiFingertec3._0;
 
@@ -66,7 +67,25 @@ Host.CreateDefaultBuilder(args)
            .ConfigureWebHostDefaults(builder =>
            {
                builder.UseUrls("http://localhost:5001/");
-
            });
+
+//Abaixo para esconder o console na inicialização
+
+[DllImport("kernel32.dll")]
+static extern IntPtr GetConsoleWindow();
+
+[DllImport("user32.dll")]
+static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+const int SW_HIDE = 0;
+const int SW_SHOW = 5;
+
+var handle = GetConsoleWindow();
+
+// Esconder console
+ShowWindow(handle, SW_HIDE);
+
+// Mostrar console
+//ShowWindow(handle, SW_SHOW);
 
 app.Run();
