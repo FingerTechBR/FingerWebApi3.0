@@ -1,0 +1,5 @@
+C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Release\net6.0\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Release\net6.0\win-x64\PubTmp\Out\appsettings.json
+C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Release\net6.0\win-x64\PubTmp\Out\WebApiFingertec3.0.pdb
+C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Release\net6.0\win-x64\PubTmp\Out\aspnetcorev2_inprocess.dll
+C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Release\net6.0\win-x64\PubTmp\Out\WebApiFingertec3.0.exe

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8zz6ayRLA9BJC6V5ZYUnkdabU7KGXnb0kS6r4gamIS2OV4I3rKOEDxONm71iIdiADq3AkYWBq4S2KjUJoXXbKg==",
+  "dgSpecHash": "mmhxXV2xdiuOpxm8CzeVrkcw0IvQGpw0vhsVPG8OXFciLvLTnw+hIZopawtVfnQUUQuFBxWi86KPsjnDECxuXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Suporte4\\Desktop\\Stuff\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
+  "projectFilePath": "C:\\Users\\Suporte4\\Documents\\Projetos\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Suporte4\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Suporte4\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

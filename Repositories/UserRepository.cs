@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using WebApiFingertec3._0.Models;
+﻿using WebApiFingertec3._0.Models;
 
 namespace WebApiFingertec3._0.Repositories
 {

@@ -6,6 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>WebApiFingertec3._0</RootNamespace>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <Company>Fingertech</Company>
+    <Version>3.0</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/FingerTechBR/FingerWebApi3.0</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +24,13 @@
     <Reference Include="NITGEN.SDK.NBioBSP">
       <HintPath>bin\Debug\net6.0\NITGEN.SDK.NBioBSP.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
