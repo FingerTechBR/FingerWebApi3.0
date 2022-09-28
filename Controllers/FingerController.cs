@@ -58,14 +58,22 @@ namespace WebApiFingertec3._0.Controllers
 
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("identify")]
         [Authorize]
-        public string Identify([FromBody] Object template)
+        public int Identify([FromBody] Object template)
         {
 
-            return Entity.EntityFinger.Identify(template);
-
+            try
+            {
+                return Entity.EntityFinger.Identify(template);
+            }
+            catch ( Exception)
+            {
+                throw;
+            }  
+    
+          
         }
 
     }

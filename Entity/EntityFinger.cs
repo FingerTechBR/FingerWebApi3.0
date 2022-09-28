@@ -132,7 +132,7 @@ namespace WebApiFingertec3._0.Entity
         }
 
 
-        public static string Identify(object template)
+        public static int Identify(object template)
         {
             uint ID;
 
@@ -157,8 +157,8 @@ namespace WebApiFingertec3._0.Entity
             foreach (DataRow dtrow in dataTable.Rows)
             {
 
-                ID = uint.Parse(dtrow["id"].ToString());
-                templatefromDB.TextFIR = dtrow["templates"].ToString();
+                ID = uint.Parse(dtrow[0].ToString());
+                templatefromDB.TextFIR = dtrow[1].ToString();
 
                 m_IndexSearch.AddFIR(templatefromDB, ID, out fpInfo);
                 NBioAPI.IndexSearch.CALLBACK_INFO_0 cbInfo0 = new NBioAPI.IndexSearch.CALLBACK_INFO_0();
@@ -171,10 +171,10 @@ namespace WebApiFingertec3._0.Entity
 
                 if (fpInfo2.ID != 0)
                 {
-                    return userID.ToString();
+                    return (int)userID;
                 }
             }
-            return "Usuário não cadastrado.";
+            return 0;
         }
         public static DataTable ConvertToDataTable(Object template)
         {
@@ -197,8 +197,8 @@ namespace WebApiFingertec3._0.Entity
 
             for (int i = 0; i < obj.Count; i++)
             {
-                string id = obj[i]["userId"].ToString();
-                string temp = obj[i]["templates"].ToString();
+                string id = obj[i]["id"].ToString();
+                string temp = obj[i]["template"].ToString();
 
                 row = dt.NewRow();
                 row["id"] = id;

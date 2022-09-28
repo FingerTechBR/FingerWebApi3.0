@@ -126,3 +126,12 @@ C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Debug\net6.0\WebApiFing
 C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Debug\net6.0\WebApiFingertec3.0.genruntimeconfig.cache
 C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\obj\Debug\net6.0\ref\WebApiFingertec3.0.dll
 C:\Users\Suporte4\Documents\Projetos\FingerWebApi3.0\bin\Debug\net6.0\libman.json
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\libman.json
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\laragon\www\FingerWebApi3.0\bin\Debug\net6.0\System.Security.Permissions.dll
