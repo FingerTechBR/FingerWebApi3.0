@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Suporte4\\Documents\\Projetos\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {}
+    "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Suporte4\\Documents\\Projetos\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {
+    "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj": {
       "version": "3.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Suporte4\\Documents\\Projetos\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
+        "projectUniqueName": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
         "projectName": "WebApiFingertec3.0",
-        "projectPath": "C:\\Users\\Suporte4\\Documents\\Projetos\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
-        "packagesPath": "C:\\Users\\Suporte4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Suporte4\\Documents\\Projetos\\FingerWebApi3.0\\obj\\",
+        "projectPath": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
+        "packagesPath": "C:\\Users\\silvio.capelo.FINGERTECH\\.nuget\\packages\\",
+        "outputPath": "D:\\laragon\\www\\FingerWebApi3.0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Suporte4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\silvio.capelo.FINGERTECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

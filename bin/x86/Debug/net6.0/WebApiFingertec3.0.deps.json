@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "WebApiFingertec3.0/1.0.0": {
+      "WebApiFingertec3.0/3.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.7",
@@ -344,7 +344,7 @@
     }
   },
   "libraries": {
-    "WebApiFingertec3.0/1.0.0": {
+    "WebApiFingertec3.0/3.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
