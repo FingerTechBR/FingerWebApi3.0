@@ -1949,8 +1949,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\silvio.capelo.FINGERTECH\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\silvio.capelo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "3.0.0",
@@ -1958,15 +1957,11 @@
       "projectUniqueName": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
       "projectName": "WebApiFingertec3.0",
       "projectPath": "D:\\laragon\\www\\FingerWebApi3.0\\WebApiFingertec3.0.csproj",
-      "packagesPath": "C:\\Users\\silvio.capelo.FINGERTECH\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\silvio.capelo\\.nuget\\packages\\",
       "outputPath": "D:\\laragon\\www\\FingerWebApi3.0\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\silvio.capelo.FINGERTECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\silvio.capelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2028,7 +2023,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -154,24 +154,27 @@ namespace WebApiFingertec3._0.Entity
             DataTable dataTable = new DataTable();
             dataTable = Entity.EntityFinger.ConvertToDataTable(template);
 
-            foreach (DataRow dtrow in dataTable.Rows)
+            if (dataTable.Rows.Count > 0)
             {
-
-                ID = uint.Parse(dtrow[0].ToString());
-                templatefromDB.TextFIR = dtrow[1].ToString();
-
-                m_IndexSearch.AddFIR(templatefromDB, ID, out fpInfo);
-                NBioAPI.IndexSearch.CALLBACK_INFO_0 cbInfo0 = new NBioAPI.IndexSearch.CALLBACK_INFO_0();
-                cbInfo0.CallBackFunction = new NBioAPI.IndexSearch.INDEXSEARCH_CALLBACK(myCallback);
-                m_NBioAPI.CloseDevice(NBioAPI.Type.DEVICE_ID.AUTO);
-                NBioAPI.IndexSearch.FP_INFO fpInfo2;
-
-                uint ret3 = m_IndexSearch.IdentifyData(hCapturedFIR, securityLevel, out fpInfo2, cbInfo0);
-                userID = fpInfo2.ID;
-
-                if (fpInfo2.ID != 0)
+                foreach (DataRow dtrow in dataTable.Rows)
                 {
-                    return (int)userID;
+
+                    ID = uint.Parse(dtrow[0].ToString());
+                    templatefromDB.TextFIR = dtrow[1].ToString();
+
+                    m_IndexSearch.AddFIR(templatefromDB, ID, out fpInfo);
+                    NBioAPI.IndexSearch.CALLBACK_INFO_0 cbInfo0 = new NBioAPI.IndexSearch.CALLBACK_INFO_0();
+                    cbInfo0.CallBackFunction = new NBioAPI.IndexSearch.INDEXSEARCH_CALLBACK(myCallback);
+                    m_NBioAPI.CloseDevice(NBioAPI.Type.DEVICE_ID.AUTO);
+                    NBioAPI.IndexSearch.FP_INFO fpInfo2;
+
+                    uint ret3 = m_IndexSearch.IdentifyData(hCapturedFIR, securityLevel, out fpInfo2, cbInfo0);
+                    userID = fpInfo2.ID;
+
+                    if (fpInfo2.ID != 0)
+                    {
+                        return (int)userID;
+                    }
                 }
             }
             return 0;

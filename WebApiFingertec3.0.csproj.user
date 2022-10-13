@@ -7,6 +7,6 @@
   <PropertyGroup>
     <ActiveDebugProfile>Perfil 1</ActiveDebugProfile>
     <IsPackable>true</IsPackable>
-    <NameOfLastUsedPublishProfile>FolderProfile</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\laragon\www\FingerWebApi3.0\Properties\PublishProfiles\FolderProfile1.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
