@@ -1,12 +1,16 @@
 ﻿using Newtonsoft.Json.Linq;
 using NITGEN.SDK.NBioBSP;
 using System.Data;
+using static NITGEN.SDK.NBioBSP.NBioAPI;
+using Type = System.Type;
 
 namespace WebApiFingertec3._0.Entity
 {
     public static class EntityFinger
     {
 
+        public static NBioAPI m_NBioAPI;
+        public static NBioAPI.IndexSearch m_IndexSearch;
         public static NBioAPI.Export? m_Export;
         public static NBioAPI.Type.FIR_TEXTENCODE? m_textFIR;
         public static NBioAPI.Type.HFIR? m_hNewFIR;
@@ -75,7 +79,7 @@ namespace WebApiFingertec3._0.Entity
                 {
                     m_NBioAPI.GetTextFIRFromHandle(hCapturedFIR, out m_textFIR, true);
 
-                    return Newtonsoft.Json.JsonConvert.SerializeObject(new { user_id = id, textFir = m_textFIR.TextFIR.ToString() });
+                    return Newtonsoft.Json.JsonConvert.SerializeObject(new { template = m_textFIR.TextFIR.ToString() });
                 }
 
                 return "Error";
@@ -115,7 +119,7 @@ namespace WebApiFingertec3._0.Entity
 
             NBioAPI.Type.FIR_PAYLOAD myPayload = new NBioAPI.Type.FIR_PAYLOAD();
 
-            uint ret1 = m_NBioAPI.VerifyMatch(hCapturedFIR, templatefromDB, out bool result, myPayload);
+             m_NBioAPI.VerifyMatch(hCapturedFIR, templatefromDB, out bool result, myPayload);
 
             if (result)
             {
@@ -132,7 +136,71 @@ namespace WebApiFingertec3._0.Entity
         }
 
 
-        public static int Identify(object template)
+        //INICIA INITENGINE PARA ALOCAR ESPAÇO EM MEMÓRIA IDENTIFY
+        public static void InitObjectAndEngineIdentify()
+        {
+            m_NBioAPI = new NBioAPI();
+            m_IndexSearch = new NBioAPI.IndexSearch(m_NBioAPI);
+            uint ret = m_IndexSearch.InitEngine();
+
+        }
+        //INSERE DADOS DO DB EM MEMÓRIA
+        public static void InsertDBInMemory(object template)
+        {
+
+            NBioAPI.Type.FIR_TEXTENCODE templatefromDB = new NBioAPI.Type.FIR_TEXTENCODE();
+            NBioAPI.IndexSearch.FP_INFO[] fpInfo;
+            /* Busca no Banco de Dados ID, Template */
+            DataTable dataTable = new DataTable();
+            //Conversão para o DataTable
+            dataTable = Entity.EntityFinger.ConvertToDataTable(template);
+
+            foreach (DataRow dtrow in dataTable.Rows)
+            {
+                uint ID = uint.Parse(dtrow[0].ToString());
+                templatefromDB.TextFIR = dtrow[1].ToString();
+                uint ret22 = m_IndexSearch.AddFIR(templatefromDB, ID, out fpInfo);
+            }
+
+        }
+        //VERIFICA A COMPATIBILIDADE DA DIGITAL
+        public static int IdentifyData(object template)
+        {
+            bool result;
+            InitObjectAndEngineIdentify();
+            InsertDBInMemory(template);
+
+            SocketClient socket = new();
+            NBioAPI.IndexSearch.CALLBACK_INFO_0 cbInfo0 = new NBioAPI.IndexSearch.CALLBACK_INFO_0();
+            cbInfo0.CallBackFunction = new NBioAPI.IndexSearch.INDEXSEARCH_CALLBACK(myCallback);
+            NBioAPI.Type.FIR_TEXTENCODE templatefromClient = new();
+
+
+            NBioAPI.Type.HFIR retorno_para_exportar = new NBioAPI.Type.HFIR();
+            NBioAPI.Type.HFIR hCapturedFIR;
+            m_NBioAPI.OpenDevice(NBioAPI.Type.DEVICE_ID.AUTO);
+            uint ret1 = m_NBioAPI.Capture(NBioAPI.Type.FIR_PURPOSE.VERIFY, out hCapturedFIR, 5000, retorno_para_exportar, null);
+
+
+            uint nMax;
+            m_IndexSearch.GetDataCount(out nMax);
+
+            uint id = 0;
+
+            // Identify FIR to IndexSearch DB
+            NBioAPI.IndexSearch.FP_INFO fpInfo2;
+            uint ret = m_IndexSearch.IdentifyData(hCapturedFIR, NBioAPI.Type.FIR_SECURITY_LEVEL.NORMAL, out fpInfo2, cbInfo0);
+            if (fpInfo2.ID != NBioAPI.Error.NONE)
+            {
+                return Convert.ToInt32(fpInfo2.ID);
+
+            }
+
+            return 0;
+        }
+
+
+        public static int Identify2(object template)
         {
             uint ID;
 
@@ -201,7 +269,7 @@ namespace WebApiFingertec3._0.Entity
             for (int i = 0; i < obj.Count; i++)
             {
                 string id = obj[i]["id"].ToString();
-                string temp = obj[i]["template"].ToString();
+                string temp = obj[i]["templates"].ToString();
 
                 row = dt.NewRow();
                 row["id"] = id;
