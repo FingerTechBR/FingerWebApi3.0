@@ -10,7 +10,7 @@
     {
 
         public int userId { get; set; }
-        public string? Templates { get; set; }
+        public string? template { get; set; }
     }
 
 
