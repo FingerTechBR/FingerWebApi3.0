@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="FTTSS">
+      <HintPath>bin\Debug\net6.0\FTTSS.dll</HintPath>
+    </Reference>
     <Reference Include="NITGEN.SDK.NBioBSP">
       <HintPath>bin\Debug\net6.0\NITGEN.SDK.NBioBSP.dll</HintPath>
     </Reference>

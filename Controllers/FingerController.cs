@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Sockets;
+using System.Text;
+using WebApiFingertec3._0.Entity;
 using WebApiFingertec3._0.Models;
 using WebApiFingertec3._0.Repositories;
 using WebApiFingertec3._0.Services;
@@ -28,36 +31,61 @@ namespace WebApiFingertec3._0.Controllers
             };
         }
 
+        //https://localhost:5050/enroll/1
         [HttpGet]
         [Route("enroll/{id:int:min(1)}")]
         [Authorize]
         public string Enroll(int id)
         {
-            return Entity.EntityFinger.EnrollCapture(id)
+            try
+            {
+                return EntityFinger.EnrollCapture(id);
+            }
+          catch (Exception e)
+            {
+
+                return "Erro " + e;
+            }
 ;
         }
-
+        //https://localhost:5050/capture
         [HttpGet]
         //[Route("capture/{id:int:min(1)}")]
         [Route("capture")]
         [Authorize]
         public string Capture()
         {
-            int id = 1;
-            return Entity.EntityFinger.Capture(id)
+            try
+            {
+                int id = 1;
+                return EntityFinger.Capture(id);
+            }
+            catch (Exception e)
+            {
+
+                return "Erro " + e;
+            }
 ;
         }
-
+        //https://localhost:5050/verify-match
         [HttpGet]
         [Route("verify-match")]
         [Authorize]
         public string VerifyMatch([FromBody] Template Templates)
         {
 
-            return Entity.EntityFinger.VerifyMatch(Templates.Templates);
+            try
+            {
+                return EntityFinger.VerifyMatch(Templates.template);
+            }
+            catch (Exception e)
+            {
+
+                return "Erro " + e;
+            }
 
         }
-
+         //https://localhost:5050/identify
         [HttpPost]
         [Route("identify")]
         [Authorize]
@@ -66,15 +94,28 @@ namespace WebApiFingertec3._0.Controllers
 
             try
             {
-                return Entity.EntityFinger.Identify(template);
+                return EntityFinger.IdentifyData(template);
             }
             catch ( Exception)
             {
-                throw;
+                return 0;
             }  
     
           
         }
 
+
+
+        //[HttpGet]
+        ////[Route("capture/{id:int:min(1)}")]
+        //[Route("enrollrdp")]
+        //[Authorize]
+        //public string Capture2()
+        //{
+        //    SocketClient socket = new();
+        //    return socket.getDigitalString(0);
+            
+        //}
+      
     }
 }
